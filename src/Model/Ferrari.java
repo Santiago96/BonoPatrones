@@ -1,9 +1,14 @@
-public class NonCaliforniaOrder implements Order {
+package Model;
+
+import Logic.OrderVisitor;
+import Logic.Order;
+
+public class Ferrari implements Order {
   private double orderAmount;
 
-  public NonCaliforniaOrder() {
+  public Ferrari() {
   }
-  public NonCaliforniaOrder(double inp_orderAmount) {
+  public Ferrari(double inp_orderAmount) {
     orderAmount = inp_orderAmount;
   }
   public double getOrderAmount() {

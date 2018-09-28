@@ -1,10 +1,15 @@
-public class CaliforniaOrder implements Order {
+package Model;
+
+import Logic.OrderVisitor;
+import Logic.Order;
+
+public class BMW implements Order {
   private double orderAmount;
   private double additionalTax;
 
-  public CaliforniaOrder() {
+  public BMW() {
   }
-  public CaliforniaOrder(double inp_orderAmount,
+  public BMW(double inp_orderAmount,
       double inp_additionalTax) {
     orderAmount = inp_orderAmount;
     additionalTax = inp_additionalTax;

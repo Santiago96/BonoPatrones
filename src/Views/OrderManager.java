@@ -1,3 +1,10 @@
+package Views;
+
+import Logic.Order;
+import Logic.OrderVisitor;
+import Model.BMW;
+import Model.Ferrari;
+import Model.Lamborghini;
 import java.util.*;
 import java.io.*;
 import java.io.*;
@@ -278,15 +285,15 @@ class ButtonHandler implements ActionListener {
   public Order createOrder(String orderType,
       double orderAmount, double tax, double SH) {
     if (orderType.equalsIgnoreCase(OrderManager.CA_ORDER)) {
-      return new CaliforniaOrder(orderAmount, tax);
+      return new BMW(orderAmount, tax);
     }
     if (orderType.equalsIgnoreCase(
       OrderManager.NON_CA_ORDER)) {
-      return new NonCaliforniaOrder(orderAmount);
+      return new Ferrari(orderAmount);
     }
     if (orderType.equalsIgnoreCase(
           OrderManager.OVERSEAS_ORDER)) {
-      return new OverseasOrder(orderAmount, SH);
+      return new Lamborghini(orderAmount, SH);
     }
     return null;
   }

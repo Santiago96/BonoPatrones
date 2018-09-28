@@ -1,10 +1,15 @@
-public class OverseasOrder implements Order {
+package Model;
+
+import Logic.Order;
+import Logic.OrderVisitor;
+
+public class Lamborghini implements Order {
   private double orderAmount;
   private double additionalSH;
 
-  public OverseasOrder() {
+  public Lamborghini() {
   }
-  public OverseasOrder(double inp_orderAmount,
+  public Lamborghini(double inp_orderAmount,
       double inp_additionalSH) {
     orderAmount = inp_orderAmount;
     additionalSH = inp_additionalSH;
