@@ -42,3 +42,17 @@ Suspensión Magnética Reológica	|Boolean												| JComboBox or JRadioButto
 Sistema de escape deportivo		|Boolean												| JComboBox or JRadioButton
 Telemetria Lamborghini			|Boolean												| JComboBox or JRadioButton
 
+
+
+Siguientes Pasos:
+
+
+
+1. Generar Vistas aplicando patrón Builder (Considerar poner imagenes de los modelos mencionados para hacerlo mas dinámico)
+2. Definir formula de cotización del precio
+3. Definir estructura Iterator para montar en una coleccion las cotizaciones.
+4. Generar Funcionalidades de cotizacion
+	4.1 Crear 
+	4.2 Consultar
+	4.3 Actualizar
+	4.4 Liquidar
