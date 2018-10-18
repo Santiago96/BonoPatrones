@@ -1,27 +1,33 @@
 package Model;
 
-import Logic.OrderVisitor;
 import Logic.Order;
+import Logic.OrderVisitor;
 
-public class BMW implements Order {
-  private double orderAmount;
-  private double additionalTax;
+public class BMW extends Order {
+
+    private String diseñoInt;
+    private boolean navegacionIS;
+    private boolean elevacion;
 
   public BMW() {
   }
-  public BMW(double inp_orderAmount,
-      double inp_additionalTax) {
-    orderAmount = inp_orderAmount;
-    additionalTax = inp_additionalTax;
+  public BMW(int id, boolean c, boolean r, String f, String cl, String rn, String m, String d, boolean n, boolean e) {
+    orderId = id;
+    convertible = c;
+    receptorDAB = r;
+    faros = f;
+    color = cl;
+    rines = rn;
+    modelo = m; 
+    diseñoInt = d;
+    navegacionIS = n;
+    elevacion= e;
   }
-  public double getOrderAmount() {
-    return orderAmount;
-  }
-  public double getAdditionalTax() {
-    return additionalTax;
-  }
+  
+ @Override
   public void accept(OrderVisitor v) {
     v.visit(this);
   }
+
 }
 

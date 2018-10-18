@@ -3,23 +3,28 @@ package Model;
 import Logic.Order;
 import Logic.OrderVisitor;
 
-public class Lamborghini implements Order {
-  private double orderAmount;
-  private double additionalSH;
+public class Lamborghini extends Order {
+  
+  private boolean suspensionMR;
+  private boolean sEDeportivo;
+  private boolean telemetriaL;
 
   public Lamborghini() {
   }
-  public Lamborghini(double inp_orderAmount,
-      double inp_additionalSH) {
-    orderAmount = inp_orderAmount;
-    additionalSH = inp_additionalSH;
+  public Lamborghini(int id, boolean c, boolean r, String f, String cl, String rn, String m, boolean s, boolean sed, boolean tl){
+    orderId = id;
+    convertible = c;
+    receptorDAB = r;
+    faros = f;
+    color = cl;
+    rines = rn;
+    modelo = m; 
+    suspensionMR = s;
+    sEDeportivo = sed;
+    telemetriaL = tl;
   }
-  public double getOrderAmount() {
-    return orderAmount;
-  }
-  public double getAdditionalSH() {
-    return additionalSH;
-  }
+
+  @Override
   public void accept(OrderVisitor v) {
     v.visit(this);
   }

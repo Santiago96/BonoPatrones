@@ -25,5 +25,5 @@ public class OrderVisitor implements VisitorInterface {
   }
   public double getOrderTotal() {
     return orderTotal;
-  }
+  }*/
 }
