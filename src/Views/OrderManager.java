@@ -31,7 +31,7 @@ public class OrderManager extends JFrame {
     super("Cars Orders");
 
     //Create the visitor instance
-    objVisitor = new OrderVisitor();
+//    objVisitor = new OrderVisitor();
 
     cmbOrderType = new JComboBox();
     cmbOrderType.addItem(OrderManager.FE_ORDER);

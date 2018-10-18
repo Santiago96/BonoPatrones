@@ -13,17 +13,15 @@ public class OrderVisitor implements VisitorInterface {
     orderObjList = new Vector();
   }
   public void visit(Ferrari inp_order) {
-    orderTotal = orderTotal + inp_order.getOrderAmount();
+    orderTotal = orderTotal;
   }
   public void visit(BMW inp_order) {
-    orderTotal = orderTotal + inp_order.getOrderAmount() +
-                 inp_order.getAdditionalTax();
+    orderTotal = orderTotal;
   }
   public void visit(Lamborghini inp_order) {
-    orderTotal = orderTotal + inp_order.getOrderAmount() +
-                 inp_order.getAdditionalSH();
+    orderTotal = orderTotal;
   }
   public double getOrderTotal() {
     return orderTotal;
-  }*/
+  }
 }

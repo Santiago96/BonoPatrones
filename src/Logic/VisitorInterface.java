@@ -6,7 +6,7 @@ import Model.Ferrari;
 import Model.BMW;
 
 public interface VisitorInterface {
-  public void visit(Ferrari nco);
-  public void visit(BMW co);
-  public void visit(Lamborghini oo);
+  public void visit(Ferrari objFerrari);
+  public void visit(BMW objBMW);
+  public void visit(Lamborghini objLam);
 }
