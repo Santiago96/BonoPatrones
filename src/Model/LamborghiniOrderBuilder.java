@@ -49,8 +49,8 @@ public class LamborghiniOrderBuilder implements IOrderBuilder, Iterator {
     }
 
     @Override
-    public void agregarVehiculo(Order oVehiculo) {
-        vehiculosL.add(oVehiculo);  
+    public void agregarVehiculo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
