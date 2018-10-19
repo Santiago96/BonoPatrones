@@ -6,11 +6,17 @@
 package Model;
 
 import Logic.IOrderBuilder;
+import Logic.Order;
 
 /**
  *
  * @author olixe
  */
 public class FerrariOrderBuilder implements IOrderBuilder{
+
+    @Override
+    public void agregarVehiculo(Order oVehiculo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

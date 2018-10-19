@@ -9,20 +9,14 @@ public class Lamborghini extends Order {
   private boolean sEDeportivo;
   private boolean telemetriaL;
 
-  public Lamborghini() {
-  }
-  public Lamborghini(int id, boolean c, boolean r, String f, String cl, String rn, String m, boolean s, boolean sed, boolean tl){
-    orderId = id;
-    convertible = c;
-    receptorDAB = r;
-    faros = f;
-    color = cl;
-    rines = rn;
-    modelo = m; 
-    suspensionMR = s;
-    sEDeportivo = sed;
-    telemetriaL = tl;
-  }
+public Lamborghini(boolean suspensionMR, boolean sEDeportivo, boolean telemetriaL, int orderId, boolean convertible, boolean receptorDAB, String faros, String color, String rines, String modelo) {
+    super(orderId, convertible, receptorDAB, faros, color, rines, modelo);
+    this.suspensionMR = suspensionMR;
+    this.sEDeportivo = sEDeportivo;
+    this.telemetriaL = telemetriaL;
+}
+
+  
 
   @Override
   public void accept(OrderVisitor v) {

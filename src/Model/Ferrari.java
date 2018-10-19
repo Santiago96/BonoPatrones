@@ -4,31 +4,20 @@ import Logic.OrderVisitor;
 import Logic.Order;
 
 public class Ferrari extends Order {
-  
-  private boolean tapacubos;
-  private boolean elevadorSus;
-  private boolean camaraFrontal;
 
-  
+    private boolean tapacubos;
+    private boolean elevadorSus;
+    private boolean camaraFrontal;
 
-  public Ferrari() {
-      
-  }
-  public Ferrari(int id, boolean c, boolean r, String f, String cl, String rn, String m, boolean t, boolean e, boolean cmr) {
-    orderId = id;
-    convertible = c;
-    receptorDAB = r;
-    faros = f;
-    color = cl;
-    rines = rn;
-    modelo = m; 
-    tapacubos = t;
-    elevadorSus = e;
-    camaraFrontal= cmr;
-  }
-  
-  @Override
-  public void accept(OrderVisitor v) {
-    v.visit(this);
-  }
+    public Ferrari(boolean tapacubos, boolean elevadorSus, boolean camaraFrontal, int orderId, boolean convertible, boolean receptorDAB, String faros, String color, String rines, String modelo) {
+        super(orderId, convertible, receptorDAB, faros, color, rines, modelo);
+        this.tapacubos = tapacubos;
+        this.elevadorSus = elevadorSus;
+        this.camaraFrontal = camaraFrontal;
+    }
+
+    @Override
+    public void accept(OrderVisitor v) {
+        v.visit(this);
+    }
 }

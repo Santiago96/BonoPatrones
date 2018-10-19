@@ -9,20 +9,14 @@ public class BMW extends Order {
     private boolean navegacionIS;
     private boolean elevacion;
 
-  public BMW() {
-  }
-  public BMW(int id, boolean c, boolean r, String f, String cl, String rn, String m, String d, boolean n, boolean e) {
-    orderId = id;
-    convertible = c;
-    receptorDAB = r;
-    faros = f;
-    color = cl;
-    rines = rn;
-    modelo = m; 
-    diseñoInt = d;
-    navegacionIS = n;
-    elevacion= e;
-  }
+    public BMW(String diseñoInt, boolean navegacionIS, boolean elevacion, int orderId, boolean convertible, boolean receptorDAB, String faros, String color, String rines, String modelo) {
+        super(orderId, convertible, receptorDAB, faros, color, rines, modelo);
+        this.diseñoInt = diseñoInt;
+        this.navegacionIS = navegacionIS;
+        this.elevacion = elevacion;
+    }
+
+  
   
   
   

@@ -11,4 +11,6 @@ package Logic;
  */
 public interface IOrderBuilder {
     
+    public void agregarVehiculo(Order oVehiculo);
+    
 }
